@@ -1,3 +1,4 @@
 # Dashboard-Admin-B5Cancel changes
-the direction of elements on this theme is RTL.
-lang : fa
+# demo : https://codepen.io/miladvj/full/zYPmpKZ
+# the direction of elements on this theme is RTL.
+# lang : fa 
