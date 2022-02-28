@@ -1,0 +1,60 @@
+body {
+  direction: rtl !important;
+  font-family: "B Yekan";
+}
+.text-right {
+  text-align: right;
+}
+
+:root {
+  --offcanvas-width: 270px;
+  --topNavbarHight: 56px;
+}
+
+*::-webkit-scrollbar {
+  width: 1em;
+}
+
+*::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(68, 67, 67);
+  outline: 1px solid rgb(24, 24, 24);
+}
+
+.sidebar-nav {
+  width: var(--offcanvas-width);
+}
+.sidebar-link {
+  display: flex;
+}
+.sidebar-link .left-icon {
+  display: inline-flex;
+  transition: all ease 0.1s;
+}
+.main-content {
+  margin-top: var(--topNavbarHight) !important;
+}
+@media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+
+  .sidebar-link[aria-expanded="true"] .left-icon {
+    transform: rotate(180deg);
+  }
+  .sidebar-nav {
+    transform: none;
+    visibility: visible !important;
+    top: var(--topNavbarHight);
+    height: calc(100% - var(--topNavbarHight));
+  }
+  .main-content {
+    margin-right: var(--offcanvas-width);
+  }
+}
